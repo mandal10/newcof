@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="download.jfif" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Helvetica, sans-serif;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+
+        }
+
+        .box {
+            position: sticky;
+            top: 0px;
+            background-color: white;
+            z-index: 10;
+
+        }
+
+        .navbar {
+            display: flex;
+            height: 65px;
+
+
+        }
+
+        .navbar h1 {
+            width: 40%;
+            margin-left: 26px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            word-spacing: 10px;
+            /* background-color: tomato; */
+
+        }
+
+        .navbar ul {
+            width: 60%;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 15px;
+            font-family: Helvetica, sans-serif;
+            /* background-color: yellow; */
+
+        }
+
+        .navbar ul li {
+            padding-left: 30px;
+            margin-top: 23px;
+            /* background-color: violet; */
+            list-style: none;
+            position: relative;
+        }
+
+        .menuIcon {
+            display: none;
+            padding: 0 10px;
+            margin-top: 15px;
+           position: relative;
+           left: 445px;
+            
+        }
+
+        input[type="checkbox"] {
+            display: none;
+            position: relative;
+            left: 420px;
+            bottom: 2.3px;
+            background-color: yellow;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .navbar ul li :hover {
+            color: coral;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+
+        .secsection {
+            height: 450px;
+            width: 100%;
+            margin-top: 15px;
+            background-image: url(header-bg-1-2.jpg);
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .secsection h1 {
+            font-size: 80px;
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 5px;
+            z-index: 1;
+        }
+
+        .secsection p {
+            font-size: 30px;
+            color: white;
+            line-height: 80px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .secbtn {
+            height: 40px;
+            width: 110px;
+            margin-top: 10px;
+            border-radius: 8px;
+            font-size: 25px;
+            background-color: coral;
+            border-color: coral;
+            color: white;
+
+        }
+
+        .secbtn:hover {
+            background: coral;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgb(233, 75, 17),
+                0 0 25px rgb(233, 75, 17),
+                0 0 50px rgb(233, 75, 17),
+                0 0 100px rgb(233, 75, 17);
+        }
+
+        .third {
+            background-image: url(coffee-item-10.jpg);
+            height: 100%vh;
+            width: 100%;
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            /* position: fixed; */
+
+        }
+
+
+        .third .h1 {
+            font-size: 35px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            word-spacing: 10px;
+            /* padding-top: 18px; */
+            color: coral;
+        }
+
+        .third .p {
+            padding-top: 30px;
+            font-size: 20px;
+            line-height: 30px;
+            color: rgb(241, 173, 128)
+        }
+
+        .thirdimg {
+            padding-top: 80px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .thirdimg img {
+            width: 250px;
+            height: 250px;
+        }
+
+        .thirdimg img:hover {
+            transform: rotate(360deg);
+            transition: 1s;
+
+        }
+
+        .thirdimg h1 {
+            color: black;
+            /* line-height: 30px;  */
+            padding-top: 20px;
+            font-size: 25px;
+            color: coral;
+        }
+
+        .thirdimg p {
+            /* line-height: 30px; */
+            font-size: 15px;
+            padding-top: 10px;
+            color: rgb(133, 83, 45);
+        }
+
+        .imgbtn {
+            margin-top: 60px;
+            height: 40px;
+            width: 150px;
+            border-radius: 8px;
+            border-color: coral;
+            font-size: 18px;
+            background-color: coral;
+            color: white;
+
+        }
+
+        .imgbtn:hover {
+            background-color: chocolate;
+            color: white;
+            box-shadow: 0 0 5px rgb(233, 75, 17),
+                0 0 25px rgb(233, 75, 17),
+                0 0 50px rgb(233, 75, 17),
+                0 0 100px rgb(233, 75, 17);
+
+        }
+
+
+
+        /* --------------fourth section-------------- */
+
+
+
+        .fourth {
+            text-align: center;
+            height: 100%vh;
+            width: 100%;
+            background-color: coral;
+            color: white;
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+
+        .fourth h1 {
+            font-size: 50px;
+        }
+
+        .fourth p {
+            padding-top: 15px;
+            font-size: 20px;
+            line-height: 40px;
+        }
+
+        .video video {
+            width: 100%;
+            border: 2px rgb(188, 86, 17) solid;
+        }
+
+
+
+        /* ------------------fifth section-------------- */
+        .fifth {
+            display: flex;
+
+        }
+
+        .fifth1 {
+            width: 100%;
+            height: 450px;
+            text-align: center;
+            /* background-color: yellow; */
+        }
+
+        .fifth h1 {
+            padding-top: 50px;
+            font-size: 50px;
+            color: rgb(83, 63, 63);
+        }
+
+        .fifth p {
+            padding-top: 30px;
+            font-size: 18px;
+            line-height: 30px;
+            color: rgb(208, 139, 139);
+        }
+
+        .learnmore {
+            margin-top: 32px;
+            height: 35px;
+            width: 150px;
+            border-radius: 8px;
+            border-color: coral;
+            font-size: 18px;
+            background-color: coral;
+            color: white;
+
+        }
+
+        .learnmore:hover {
+            background-color: chocolate;
+            color: white;
+            box-shadow: 0 0 5px rgb(233, 75, 17),
+                0 0 25px rgb(233, 75, 17),
+                0 0 50px rgb(233, 75, 17),
+                0 0 100px rgb(233, 75, 17);
+
+        }
+
+
+        
+        .fifth2 {
+            width: 100%;
+            /* background-color: yellowgreen; */
+            background-image: url(gallery-coffee-image-5.jpg);
+            background-size: cover;
+            background-position: center ;
+        }
+
+        /* ---------------------six section----------------- */
+
+
+
+        .six {
+            background-image: url(section-bg-10.jpg);
+            width: 100%;
+            height: 100vh;
+            background-position: center center;
+            background-size: cover;
+            text-align: left;
+        }
+
+        .six h1 {
+            padding-top: 90px;
+            padding-left: 550px;
+            font-size: 35px;
+            color: rgb(83, 63, 63);
+        }
+
+        .six p {
+            padding-left: 550px;
+            padding-top: 25px;
+            line-height: 30px;
+            font-size: 18px;
+            color: rgb(208, 139, 139);
+        }
+
+        .sixbtn {
+            margin-top: 45px;
+            height: 35px;
+            margin-left: 550px;
+            width: 150px;
+            border-radius: 8px;
+            border-color: coral;
+            font-size: 18px;
+            background-color: coral;
+            color: white;
+        }
+
+        .sixbtn:hover {
+            background-color: chocolate;
+            color: white;
+            box-shadow: 0 0 5px rgb(233, 75, 17),
+                0 0 25px rgb(233, 75, 17),
+                0 0 50px rgb(233, 75, 17),
+                0 0 100px rgb(233, 75, 17);
+        }
+
+        /* -----------seventh section-------------- */
+
+        .seven {
+            background-image: url(section-bg-3.jpg);
+            height: 500px;
+            width: 100%;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .seven h1 {
+            font-size: 35px;
+            color: white;
+            padding-top: 80px;
+            padding-left: 100px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+        }
+
+        .seven ul {
+            display: flex;
+            font-size: 17px;
+            color: rgb(239, 169, 143);
+            margin-left: 80px;
+            margin-top: 40px;
+
+        }
+
+        .seven ul li {
+            list-style: none;
+         margin-left: 20px;
+            display: block;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+        }
+
+        .seven ul li i {
+            text-align: center;
+            font-size: 40px;
+            display: block;
+            padding-bottom: 30px;
+        }
+
+        .seven p {
+            color: white;
+            font-size: 14px;
+            line-height: 23px;
+            padding-top: 30px;
+            padding-left: 100px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+        }
+
+        .sevenbtn {
+            margin-top: 50px;
+            height: 35px;
+            margin-left: 100px;
+            width: 150px;
+            border-radius: 8px;
+            border-color: coral;
+            font-size: 18px;
+            background-color: coral;
+            color: white;
+        }
+
+        .sevenbtn:hover {
+            background-color: chocolate;
+            color: white;
+            box-shadow: 0 0 5px rgb(233, 75, 17),
+                0 0 25px rgb(233, 75, 17),
+                0 0 50px rgb(233, 75, 17),
+                0 0 100px rgb(233, 75, 17);
+        }
+
+
+        @media only screen and (max-width: 882px) {
+            .box{
+                position:sticky;
+            }
+            .navbar {
+                display: flex;
+                height: 65px;
+
+            }
+           
+
+            .navbar h1 {
+                margin-left: 26px;
+                margin-top: 20px;
+                font-size: 20px;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                /* background-color: yellowgreen; */
+            }
+
+            .navbar ul {
+                display: flex;
+                justify-content: flex-end;
+                font-size: 12px;
+                font-family: Helvetica, sans-serif;
+
+            }
+
+            .menuIcon {
+                height: 35px;
+                font-size: 25px;
+                border: 2px solid;
+                display: inline-block;
+                border-radius: 5px;
+                
+            }
+
+             input[type="checkbox"]:checked ~ .navbar >ul li{
+                position: relative;
+              left: 0px;
+              top: 0px;
+            }
+
+            nav ul li {
+                background-color: cyan;
+                box-sizing: border-box;
+                display: none;
+            }
+
+
+
+            /* ------------------second part ---------------- */
+
+
+            .secsection {
+            height: 450px;
+            width: 100%;
+            /* margin-top: 15px; */
+            background-image: url(header-bg-1-2.jpg);
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+          
+        }
+
+        .secsection h1 {
+            font-size: 80px;
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            /* letter-spacing: 5px; */
+            z-index: 1;
+        }
+
+        .secsection p {
+            font-size: 40px;
+            color: white;
+            line-height: 80px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .secbtn {
+            height: 40px;
+            width: 110px;
+            margin-top: 10px;
+            border-radius: 8px;
+            font-size: 25px;
+            background-color: coral;
+            border-color: coral;
+            color: white;
+
+        }
+
+        .secbtn:hover {
+            background: coral;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgb(233, 75, 17),
+                0 0 25px rgb(233, 75, 17),
+                0 0 50px rgb(233, 75, 17),
+                0 0 100px rgb(233, 75, 17);
+        }
+
+
+
+        /* --------------------third section--------------------- */
+
+
+        .third {
+            background-image: url(coffee-item-10.jpg);
+            height: 100%vh;
+            width: 100%;
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            /* padding-top: 70px; */
+            /* padding-bottom: 100px; */
+            /* position: fixed; */
+
+        }
+
+
+        .third .h1 {
+            font-size: 30px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            /* word-spacing: 10px; */
+            color: coral;
+        }
+
+        .third .p {
+            line-height: 24px;
+            padding-top: 18px;
+            font-size: 15px;
+            color: rgb(241, 173, 128)
+        }
+
+        .thirdimg {
+            margin-top: -40px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .thirdimg img {
+            width: 200px;
+            height: 200px;
+        }
+
+         .thirdimg img:hover {
+            transform: rotate(360deg);
+            transition: 1s;
+
+         } 
+
+        .thirdimg h1 {
+            color: black;
+            line-height: 10px;
+            font-size: 18px;
+            color: coral;
+        }
+
+        .thirdimg p {
+            line-height: 20px;
+            font-size: 13px;
+            color: rgb(133, 83, 45);
+        }
+
+        .imgbtn {
+            margin-top: 40px;
+            height: 35px;
+            width: 150px;
+            border-radius: 8px;
+            border-color: coral;
+            font-size: 18px;
+            background-color: coral;
+            color: white;
+
+        }
+
+        .imgbtn:hover {
+            background-color: chocolate;
+            color: white;
+            box-shadow: 0 0 5px rgb(233, 75, 17),
+                0 0 25px rgb(233, 75, 17),
+                0 0 50px rgb(233, 75, 17),
+                0 0 100px rgb(233, 75, 17);
+
+        }
+
+
+
+        /* ----------fifth section----------- */
+
+
+        .fifth {
+            display: flex;
+
+        }
+
+        .fifth1 {
+            width: 100%;
+            height: 450px;
+            text-align: center;
+            /* background-color: yellow; */
+        }
+
+        .fifth h1 {
+            padding-top: 70px;
+            font-size: 40px;
+            color: rgb(83, 63, 63);
+        }
+
+        .fifth p {
+            padding-top: 40px;
+            font-size: 15px;
+            line-height: 20px;
+            color: rgb(208, 139, 139);
+        }
+
+        .learnmore {
+            margin-top: 60px;
+            height: 35px;
+            width: 150px;
+            border-radius: 8px;
+            border-color: coral;
+            font-size: 18px;
+            background-color: coral;
+            color: white;
+
+        }
+
+        .learnmore:hover {
+            background-color: chocolate;
+            color: white;
+            box-shadow: 0 0 5px rgb(233, 75, 17),
+                0 0 25px rgb(233, 75, 17),
+                0 0 50px rgb(233, 75, 17),
+                0 0 100px rgb(233, 75, 17);
+
+        }
+
+
+        
+        .fifth2 {
+            width: 100%;
+            /* background-color: yellowgreen; */
+            background-image: url(gallery-coffee-image-5.jpg);
+            background-size: cover;
+            background-position: center ;
+        }
+
+        /* ---------------------six section----------------- */
+
+
+
+        .six {
+            background-image: url(section-bg-10.jpg);
+            width: 100%;
+            height: 400px;
+            background-position: center center;
+            background-size: cover;
+            text-align: left;
+        }
+
+        .six h1 {
+            padding-top: 70px;
+            padding-left: 400px;
+            font-size: 35px;
+            color: rgb(83, 63, 63);
+        }
+
+        .six p {
+            padding-left: 400px;
+            padding-top: 25px;
+            line-height: 25px;
+            font-size: 14px;
+            color: rgb(208, 139, 139);
+        }
+
+        .sixbtn {
+            margin-top: 45px;
+            height: 35px;
+            margin-left: 400px;
+            width: 150px;
+            border-radius: 8px;
+            border-color: coral;
+            font-size: 18px;
+            background-color: coral;
+            color: white;
+        }
+
+        .sixbtn:hover {
+            background-color: chocolate;
+            color: white;
+            box-shadow: 0 0 5px rgb(233, 75, 17),
+                0 0 25px rgb(233, 75, 17),
+                0 0 50px rgb(233, 75, 17),
+                0 0 100px rgb(233, 75, 17);
+        }
+
+        /* -----------seventh section-------------- */
+
+        .seven {
+            background-image: url(section-bg-3.jpg);
+            height: 400px;
+            width: 100%;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .seven h1 {
+            font-size: 30px;
+            color: white;
+            padding-top: 60px;
+            padding-left: 100px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+        }
+
+        .seven ul {
+            display: flex;
+            font-size: 15px;
+            color: rgb(239, 169, 143);
+            margin-left: 80px;
+            margin-top: 30px;
+
+        }
+
+        .seven ul li {
+            list-style: none;
+         margin-left: 20px;
+            display: block;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+        }
+
+        .seven ul li i {
+            text-align: center;
+            font-size: 30px;
+            display: block;
+            padding-bottom: 30px;
+        }
+
+        .seven p {
+            color: white;
+            font-size: 14px;
+            line-height: 17px;
+            padding-top: 30px;
+            padding-left: 100px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+        }
+
+        .sevenbtn {
+            margin-top: 30px;
+            height: 35px;
+            margin-left: 100px;
+            width: 150px;
+            border-radius: 8px;
+            border-color: coral;
+            font-size: 18px;
+            background-color: coral;
+            color: white;
+        }
+
+        .sevenbtn:hover {
+            background-color: chocolate;
+            color: white;
+            box-shadow: 0 0 5px rgb(233, 75, 17),
+                0 0 25px rgb(233, 75, 17),
+                0 0 50px rgb(233, 75, 17),
+                0 0 100px rgb(233, 75, 17);
+        }
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <nav class="navbar">
+                <h1>
+                    Coffee Shop Landing Page
+                </h1>
+                <label class="menuIcon" for="showMenu">≡</label>
+            <input type="checkbox" id="showMenu">
+                <ul>
+                    <li><a href="#Landing">Landing</a></li>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Menu">Menu</a></li>
+                    <li><a href="#Guide">Guide</a></li>
+                    <li><a href="#Shop">Shop</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="#shopping"><i class="fa-solid fa-cart-shopping "></i></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+        <div class="secsection" id="Home">
+            <h1>COFFEE HOUSE</h1>
+            <div>
+                <p>Serving Only the Best since 2013</p>
+            </div>
+            <div>
+                <button class="secbtn">Shop</button>
+            </div>
+        </div>
+        <div class="third">
+            <h1 class="h1"> WE BELIEVE IN COFFEE THAT TASTES </h1>
+            <h1 class="h1">INCREDIBLE</h1>
+            <p class="p">Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br> accusantium doloremque
+                laudantium,
+                totam rem aperiam, eaque ipsa <br> quae ab illo.</p>
+            <div class="thirdimg shopping" id="Menu">
+                <div>
+                    <img src="coffee-item-1.png" alt="">
+                    <h1>MOCHA LATTE</h1>
+                    <p>Sed ut perspiciatis unde omnis <br> iste natus error sit voluptatem <br> accusantium doloremque
+                        <br> laudantium.
+                    </p>
+                </div>
+                <div><img src="coffee-item-2.png" alt="">
+                    <h1>POUR OVER</h1>
+                    <p>Sed ut perspiciatis unde omnis <br> iste natus error sit voluptatem <br> accusantium doloremque
+                        <br> laudantium.
+                    </p>
+                </div>
+                <div>
+                    <img src="coffee-item-3.png" alt="">
+                    <h1>ESPRESSO</h1>
+                    <p>Sed ut perspiciatis unde omnis <br> iste natus error sit voluptatem <br> accusantium doloremque
+                        <br> laudantium.
+                    </p>
+                </div>
+            </div>
+            <button class="imgbtn">FULL MENU</button>
+        </div>
+
+        <div class="fourth" id="Guide">
+            <h1>OUR STORY</h1>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br> accusantium doloremque laudantium,
+                totam rem aperiam.</p>
+        </div>
+        <div class="video">
+            <video controls autoplay loop>
+                <source src="pexels-mixkit-free-video-assets-2675509-1920x1080-24fps.mp4">
+            </video>
+        </div>
+
+
+        <div class="fifth">
+            <div class="fifth1" id="Shop">
+                <h1>FRESH BEANS</h1>
+                <p>Sed ut perspiciatis unde omnis iste <br> natus error sit voluptatem accusantium doloremque
+                    laudantium, <br> totam rem aperiam, eaque ipsa quae ab illo inventore <br> veritatis et quasi
+                    architecto beatae vitae dicta sunt <br> explicabo.</p>
+                <button class="learnmore">LEARN MORE</button>
+            </div>
+            <div class="fifth2">
+            </div>
+        </div>
+
+        <div class="six" id="blog">
+            <h1>GREAT COFFEE</h1>
+            <p>Sed ut perspiciatis unde omnis iste<br> natus error sit voluptatem accusantium doloremque laudantium,
+                <br> totam rem aperiam, eaque ipsa quae ab illo inventore <br> veritatis et quasi architecto beatae
+                vitae dicta sunt <br> explicabo.
+            </p>
+            <button class="sixbtn">FULL MENU</button>
+        </div>
+
+
+        <div class="seven" id="About">
+            <h1>THE BEST COFFEE SHOP</h1>
+            <ul>
+                <li>
+                    <i class="fa-brands fa-youtube"></i>
+                    BEST BEANS
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-truck-fast"></i>
+                    QUALITY MILK
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-gift"></i>
+                    PERFECT BLEND
+                </li>
+            </ul>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem <br> accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa <br> quae ab illo inventore veritatis et quasi architecto beatae vitae.
+            </p>
+            <button class="sevenbtn">About US</button>
+        </div>
+    </div>
+</body>
+
+</html>
